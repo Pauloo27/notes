@@ -1,14 +1,15 @@
 {
-  "name": "template-ts",
+  "name": "notes",
+  "author": "Pauloo27",
   "version": "0.1.0",
-  "description": "",
+  "description": "Take notes of stuff",
   "scripts": {
     "start": "rm -r dist/; rm -r .parcel-cache; parcel index.html",
     "build": "parcel build index.html",
     "typecheck": "tsc --noEmit",
     "typewatch": "tsc --noEmit --watch"
   },
-  "license": "MIT",
+  "license": "GPL-2.0",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
