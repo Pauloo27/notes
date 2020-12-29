@@ -1,0 +1,10 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* theming */
+body {
+  background-color: #1a1a1a;
+  color: #eee;
+}
