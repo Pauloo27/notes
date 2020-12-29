@@ -1,3 +1,6 @@
 header {
-  background-color: red;
+  background-color: #44475a;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }

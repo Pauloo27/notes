@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header>
       <h1>Notes</h1>
-      <button>New</button>
+      <button className="btn-default">New</button>
     </header>
   );
 }
