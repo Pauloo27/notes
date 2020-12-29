@@ -1,11 +1,11 @@
 header {
-  background-color: #44475a;
+  background-color: var(--background-alt);
   display: flex;
   justify-content: space-between;
   padding: 10px;
 }
 
 header a {
-  color: #f8f8f2;
+  color: var(--text);
   text-decoration: none;
 }
