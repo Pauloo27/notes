@@ -4,3 +4,8 @@ header {
   justify-content: space-between;
   padding: 10px;
 }
+
+header a {
+  color: #f8f8f2;
+  text-decoration: none;
+}
