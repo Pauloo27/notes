@@ -1,10 +1,20 @@
 import * as React from "react";
 import NoteEditor from "~/src/components/NoteEditor";
 
-export default function New() {
+interface NewProps {
+  store: Function;
+}
+
+export default function New(props: NewProps) {
+  const createNote = props.store((state: any) => state.createNote);
+
+  const handleSave = (title: string, body: string) => {
+    createNote(title, body);
+  };
+
   return (
     <div id="main-container">
-      <NoteEditor/>
+      <NoteEditor onSave={handleSave}/>
     </div>
   );
 }
