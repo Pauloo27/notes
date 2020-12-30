@@ -9,9 +9,12 @@ interface NoteEditorProps {
 
 export default function NoteEditor(props: NoteEditorProps) {
   const [title, setTitle] = React.useState("");
+  const [body, setBody] = React.useState("");
+
   const handleSave = () => {
-    props.onSave(title, "");
+    props.onSave(title, body);
   };
+
   return (
     <div id="note-editor-container">
       <div>
@@ -26,7 +29,12 @@ export default function NoteEditor(props: NoteEditorProps) {
           <FontAwesomeIcon icon={faSave} />
         </button>
       </div>
-      <textarea rows={15} placeholder="Note content" className="input" />
+      <textarea
+        rows={15}
+        placeholder="Note content"
+        className="input"
+        onChange={(e) => setBody(e.target.value)}
+      />
     </div>
   );
 }
