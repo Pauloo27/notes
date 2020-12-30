@@ -1,5 +1,10 @@
 import * as React from "react";
+import NoteEditor from "~/src/components/NoteEditor";
 
 export default function New() {
-  return <h1>New</h1>;
+  return (
+    <div id="main-container">
+      <NoteEditor/>
+    </div>
+  );
 }

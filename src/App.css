@@ -9,13 +9,33 @@
   --background-alt: #44475a;
   --danger: #ff5555;
   --text: #f8f8f2;
+  --text-alt: #ccc;
   --default: #6272a4;
+  --shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+::placeholder {
+  color: var(--text-alt);
 }
 
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--background);
   color: var(--text);
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+/* inputs*/
+.input {
+  background-color: var(--background-alt);
+  color: var(--text);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
 }
 
 /* buttons */
@@ -25,8 +45,9 @@ body {
   padding: 10px;
   background-color: var(--default);
   border-radius: 100px;
-  box-shadow: 0px 2px 5px black;
   text-align: center;
+  box-shadow: var(--shadow);
+  color: var(--text);
 }
 
 .btn-icon {
@@ -36,4 +57,8 @@ body {
 
 .btn-danger {
   background-color: var(--danger);
+}
+
+#main-container {
+  margin: 10px;
 }

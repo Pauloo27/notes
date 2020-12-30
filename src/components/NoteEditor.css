@@ -1,0 +1,16 @@
+#note-editor-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#note-editor-container textarea {
+  margin-top: 10px;
+  resize: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#note-editor-container #title-input {
+  min-width: 30%;
+}
