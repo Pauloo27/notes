@@ -4,6 +4,7 @@
   padding: 10px;
   border-radius: 15px;
   margin: 10px;
+  white-space: pre-wrap;
   box-shadow: var(--shadow);
 }
 

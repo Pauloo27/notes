@@ -1,5 +1,4 @@
 import * as React from "react";
-import Note from "~/src/Note";
 import { useParams, Redirect, Link } from "react-router-dom";
 import { formatDateTime } from "~/src/Utils";
 import "./View.css";
