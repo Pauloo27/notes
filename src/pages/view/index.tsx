@@ -1,6 +1,6 @@
 import * as React from "react";
 import Note from "~/src/Note";
-import { useParams, Redirect } from "react-router-dom";
+import { useParams, Redirect, Link } from "react-router-dom";
 import { formatDateTime } from "~/src/Utils";
 import "./View.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -34,9 +34,11 @@ export default function View(props: ViewProps) {
           </span>
         </div>
         <div id="note-actions">
-          <button className="btn-default btn-icon">
-            <FontAwesomeIcon icon={faPen} />
-          </button>
+          <Link to={`/edit/${note.id}`}>
+            <button className="btn-default btn-icon">
+              <FontAwesomeIcon icon={faPen} />
+            </button>
+          </Link>
           <button onClick={handleDelete} className="btn-default btn-icon btn-danger">
             <FontAwesomeIcon icon={faTrash} />
           </button>

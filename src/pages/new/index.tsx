@@ -15,10 +15,10 @@ export default function New(props: NewProps) {
     createNote(title, body).then(setNoteId);
   };
 
+  if (noteId !== undefined ) return (<Redirect to={`/view/${noteId}`}/>);
   return (
     <div id="main-container">
       <NoteEditor onSave={handleSave}/>
-      {noteId ? <Redirect to={`/view/${noteId}`}/> : null}
     </div>
   );
 }

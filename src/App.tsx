@@ -11,6 +11,7 @@ import Header from "./components/Header";
 import Home from "./pages/home/index";
 import View from "./pages/view/index";
 import New from "./pages/new/index";
+import Edit from "./pages/edit";
 import "./App.css";
 import { randomString } from "./Utils";
 
@@ -37,6 +38,11 @@ export default function App() {
         });
       });
     },
+    editNote: (note: Note) => set((state: any) => {
+      const newNotes = state.notes;
+      newNotes[note.id] = note;
+      return {notes: newNotes};
+    }),
     deleteNote: (note: Note) =>
       set((state: any) => {
         const newNotes = state.notes;
@@ -59,6 +65,9 @@ export default function App() {
         </Route>
         <Route path="/view/:id">
           <View store={useStore} />
+        </Route>
+        <Route path="/edit/:id">
+          <Edit store={useStore} />
         </Route>
         <Route path="/" exact>
           <Home store={useStore} />
