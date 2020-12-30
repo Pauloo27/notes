@@ -9,6 +9,7 @@ import {
 import Note from "./Note";
 import Header from "./components/Header";
 import Home from "./pages/home/index";
+import View from "./pages/view/index";
 import New from "./pages/new/index";
 import "./App.css";
 import { randomString } from "./Utils";
@@ -23,7 +24,7 @@ export default function App() {
         do {
           id = randomString() + randomString();
         } while (id in newNotes);
-        const note: Note = { title, body, id, createdAt: new Date() };
+        const note: Note = { title, body, id, createdAt: new Date().toJSON() };
         newNotes[id] = note;
         return newNotes;
       }),
@@ -40,6 +41,9 @@ export default function App() {
       <Switch>
         <Route path="/new" exact>
           <New store={useStore} />
+        </Route>
+        <Route path="/view/:id">
+          <View store={useStore} />
         </Route>
         <Route path="/" exact>
           <Home store={useStore} />

@@ -24,6 +24,11 @@ body {
   color: var(--text);
 }
 
+.link {
+  color: var(--text);
+  text-decoration: none;
+}
+
 .m-10 {
   margin: 10px;
 }
