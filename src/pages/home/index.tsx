@@ -12,14 +12,10 @@ export default function Home(props: HomeProps) {
     const keys = Object.keys(notes);
     if (keys.length === 0) return <h3>No notes found!</h3>;
 
-    return keys.map(key => {
-      return <NotePreview key={key} note={notes[key]}/>;
-    })
-  }
+    return keys.map((key) => {
+      return <NotePreview key={key} note={notes[key]} />;
+    });
+  };
 
-  return (
-    <div id="main-container">
-      {listNotes()}
-    </div>
-  );
+  return <div id="main-container">{listNotes()}</div>;
 }

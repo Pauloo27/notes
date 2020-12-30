@@ -2,7 +2,7 @@ import * as React from "react";
 import Note from "~src/Note";
 import "./NotePreview.css";
 import { Link } from "react-router-dom";
-import {formatDateTime} from "~/src/Utils"
+import { formatDateTime } from "~/src/Utils";
 
 interface NotePreviewProps {
   note: Note;

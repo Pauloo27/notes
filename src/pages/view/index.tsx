@@ -3,8 +3,8 @@ import Note from "~/src/Note";
 import { useParams, Redirect, Link } from "react-router-dom";
 import { formatDateTime } from "~/src/Utils";
 import "./View.css";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faPen, faTrash} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPen, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 interface ViewProps {
   store: Function;
@@ -39,7 +39,10 @@ export default function View(props: ViewProps) {
               <FontAwesomeIcon icon={faPen} />
             </button>
           </Link>
-          <button onClick={handleDelete} className="btn-default btn-icon btn-danger">
+          <button
+            onClick={handleDelete}
+            className="btn-default btn-icon btn-danger"
+          >
             <FontAwesomeIcon icon={faTrash} />
           </button>
         </div>

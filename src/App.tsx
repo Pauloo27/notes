@@ -38,11 +38,12 @@ export default function App() {
         });
       });
     },
-    editNote: (note: Note) => set((state: any) => {
-      const newNotes = state.notes;
-      newNotes[note.id] = note;
-      return {notes: newNotes};
-    }),
+    editNote: (note: Note) =>
+      set((state: any) => {
+        const newNotes = state.notes;
+        newNotes[note.id] = note;
+        return { notes: newNotes };
+      }),
     deleteNote: (note: Note) =>
       set((state: any) => {
         const newNotes = state.notes;

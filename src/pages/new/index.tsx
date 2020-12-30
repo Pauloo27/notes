@@ -1,6 +1,6 @@
 import * as React from "react";
 import NoteEditor from "~/src/components/NoteEditor";
-import {Redirect} from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 interface NewProps {
   store: Function;
@@ -11,14 +11,14 @@ export default function New(props: NewProps) {
   const [noteId, setNoteId] = React.useState(undefined as string | undefined);
 
   const handleSave = (title: string, body: string) => {
-    if(title.trim() === "") return;
+    if (title.trim() === "") return;
     createNote(title, body).then(setNoteId);
   };
 
-  if (noteId !== undefined ) return (<Redirect to={`/view/${noteId}`}/>);
+  if (noteId !== undefined) return <Redirect to={`/view/${noteId}`} />;
   return (
     <div id="main-container">
-      <NoteEditor onSave={handleSave}/>
+      <NoteEditor onSave={handleSave} />
     </div>
   );
 }
