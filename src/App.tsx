@@ -17,17 +17,26 @@ import { randomString } from "./Utils";
 export default function App() {
   const useStore = create((set) => ({
     notes: JSON.parse(localStorage.getItem("notes") || "{}"),
-    createNote: (title: string, body: string) =>
-      set((state: any) => {
-        let id: string;
-        const newNotes = state.notes;
-        do {
-          id = randomString() + randomString();
-        } while (id in newNotes);
-        const note: Note = { title, body, id, createdAt: new Date().toJSON() };
-        newNotes[id] = note;
-        return newNotes;
-      }),
+    createNote: (title: string, body: string): Promise<string> => {
+      return new Promise<string>((res) => {
+        set((state: any) => {
+          const newNotes = state.notes;
+          let id: string;
+          do {
+            id = randomString() + randomString();
+          } while (id in newNotes);
+          const note: Note = {
+            title,
+            body,
+            id,
+            createdAt: new Date().toJSON(),
+          };
+          newNotes[id] = note;
+          res(id);
+          return newNotes;
+        });
+      });
+    },
   }));
 
   useStore.subscribe(
