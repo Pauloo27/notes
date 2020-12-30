@@ -6,9 +6,9 @@
 }
 
 .note-preview-container span {
-  margin-left: 5px;
+  margin-right: 10px;
 }
 
-.note-preview-container .note-preview-created {
-  color: var(--background);
+.note-preview-title {
+  font-weight: bold;
 }
