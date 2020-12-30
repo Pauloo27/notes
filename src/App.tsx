@@ -37,6 +37,12 @@ export default function App() {
         });
       });
     },
+    deleteNote: (note: Note) =>
+      set((state: any) => {
+        const newNotes = state.notes;
+        delete newNotes[note.id];
+        return { notes: newNotes };
+      }),
   }));
 
   useStore.subscribe(

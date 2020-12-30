@@ -12,8 +12,18 @@ interface ViewProps {
 
 export default function View(props: ViewProps) {
   const { id } = useParams();
-  const note: Note | undefined = props.store((state: any) => state.notes)[id];
+  const notes = props.store((state: any) => state.notes);
+  const [note, setNote] = React.useState(notes[id]);
+
+  const deleteNote = props.store((state: any) => state.deleteNote);
+
+  const handleDelete = () => {
+    deleteNote(note);
+    setNote(undefined);
+  };
+
   if (note === undefined) return <Redirect to="/" />;
+
   return (
     <div id="main-container">
       <div id="note-header">
@@ -27,7 +37,7 @@ export default function View(props: ViewProps) {
           <button className="btn-default btn-icon">
             <FontAwesomeIcon icon={faPen} />
           </button>
-          <button className="btn-default btn-icon">
+          <button onClick={handleDelete} className="btn-default btn-icon btn-danger">
             <FontAwesomeIcon icon={faTrash} />
           </button>
         </div>

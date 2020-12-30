@@ -9,7 +9,6 @@ interface NotePreviewProps {
 }
 
 export default function NotePreview(props: NotePreviewProps) {
-  console.log(props.note);
   return (
     <Link to={`/view/${props.note.id}`} className="link">
       <div className="note-preview-container">
