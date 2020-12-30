@@ -1,7 +1,7 @@
 .note-preview-container {
   background-color: var(--default);
   padding: 10px;
-  border-radius: 10px;
+  border-radius: var(--radius);
   margin: 10px;
 }
 

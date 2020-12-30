@@ -1,0 +1,19 @@
+#note-body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-alt);
+  padding: 10px;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+#note-header {
+  background-color: var(--background-alt);
+  padding: 10px;
+  border-radius: var(--radius);
+  margin: 10px;
+}
+
+#note-title {
+  font-weight: bold;
+  margin-right: 10px;
+}

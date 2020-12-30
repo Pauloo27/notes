@@ -12,6 +12,7 @@
   --text-alt: #ccc;
   --default: #6272a4;
   --shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+  --radius: 10px;
 }
 
 ::placeholder {
