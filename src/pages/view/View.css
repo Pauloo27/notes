@@ -4,16 +4,29 @@
   padding: 10px;
   border-radius: 15px;
   margin: 10px;
+  box-shadow: var(--shadow);
 }
 
 #note-header {
+  box-shadow: var(--shadow);
   background-color: var(--background-alt);
   padding: 10px;
   border-radius: var(--radius);
   margin: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 #note-title {
   font-weight: bold;
   margin-right: 10px;
+}
+
+#note-info {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#note-actions button {
+  margin-left: 10px;
 }

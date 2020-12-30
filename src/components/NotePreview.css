@@ -3,6 +3,7 @@
   padding: 10px;
   border-radius: var(--radius);
   margin: 10px;
+  box-shadow: var(--shadow);
 }
 
 .note-preview-container span {
