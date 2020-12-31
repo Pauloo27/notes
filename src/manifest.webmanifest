@@ -1,8 +1,10 @@
 {
-  "name": "Notes",
+  "name": "EzNotes",
+  "short_name": "EzNotes",
   "start_url": "/",
   "icons": [],
+  "theme_color": "red",
+  "background_color": "green",
   "display": "fullscreen",
-  "manifest_version": 2,
-  "version": "0.0.0"
+  "orientation": "portrait"
 }
